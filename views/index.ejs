@@ -1,0 +1,32 @@
+
+<%- include('header'); -%>
+  <!-- Main -->
+  <main class="et-main">
+ 
+    <section class="et-slide HomeContent" id="tab-flexbox">
+      <div class="HomeHeading"><h1>Home</h1></div>
+      <div class="content">
+
+        <% posts.forEach(function(post){ %>
+<h2><%= (post.Heading)  %> </h2>
+<p><%= (post.content.substring(0, 99)+ "...")  %>
+<a href="/posts/<%=post.Heading%>">Read more</a></p>
+    <%  })%>
+      
+    </div>
+    </section>
+    <section class="et-slide" id="tab-react">
+      <h1>Quotes</h1>
+      <h3>favourite Quotes</h3>
+    </section>
+    <section class="et-slide" id="tab-angular">
+      <h1>Contact Us</h1>
+      <h3>Contact me or Harshit</h3>
+    </section>
+    <section class="et-slide" id="tab-other">
+      <h1>About</h1>
+      <h3>something about Harshit</h3>
+    </section>
+  </main>
+<!-- partial -->
+<%- include('footer'); -%>
